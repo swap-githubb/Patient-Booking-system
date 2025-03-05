@@ -12,7 +12,9 @@ connectDB();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://patient-booking-system-1.onrender.com'
+}));
 
 // Routes
 app.use('/api/doctors', require('./routes/doctors'));
